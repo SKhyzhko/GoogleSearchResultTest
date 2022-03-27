@@ -7,17 +7,12 @@ using System.Threading.Tasks;
 
 namespace GoogleSearchResultTest.PageObjects
 {
-    class GoogleSearchPage
+    class GoogleSearchPage : BasePageObject
     {
-        private IWebDriver webDriver;
-
 
         private readonly By _SearchField = By.XPath("//input[@class='gLFyf gsfi']");
 
-        public GoogleSearchPage(IWebDriver driver)
-        {
-            webDriver = driver;
-        }
+        public GoogleSearchPage(IWebDriver driver) : base(driver) { }
 
         public GoogleSearchPage SetSearchField(string search)
         {

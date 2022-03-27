@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace GoogleSearchResultTest.PageObjects
 {
-    class GooglePage
+    class GooglePage : BasePageObject
     {
-        private IWebDriver webDriver;
 
         private readonly By GetArticleTitle = By.XPath("//h3[@class='LC20lb MBeuO DKV0Md']");
 
-        public GooglePage(IWebDriver driver)
-        {
-            webDriver = driver;
-        }
+        public GooglePage(IWebDriver driver) : base(driver) { }
 
         public GooglePage AreEnoughTitles(int expectedNumberOfTitles, bool expected = true)
         {
