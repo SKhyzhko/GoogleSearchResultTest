@@ -9,7 +9,7 @@ namespace GoogleSearchResultTest
     public class InputData
     {
         public static string StartUrl = "https://www.google.com/";
-        public static string ToSearch = "Automation";
+        public static string ToSearch = "automation";
         public static int numberOfTitles = 5;
     }
 }
